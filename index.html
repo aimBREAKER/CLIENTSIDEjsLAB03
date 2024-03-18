@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Pizza Order Form">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <!-- Page header with main title and student info -->
+    <header>
+        <h1>Pizza Palace</h1>
+        <p id="studentInfo"></p>
+    </header>
+    <!-- Main content area with the pizza order form -->
+    <main>
+        <form id="pizzaForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-z ]+" title="Only letters allowed">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <!-- Pizza size selection -->
+            <label for="pizza-size">Pizza Size:</label>
+            <select id="pizza-size" name="pizza_size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <!-- Crust type selection -->
+            <label for="crust">Crust Type:</label>
+            <select id="crust" name="crust">
+                <option value="thin">Thin Crust</option>
+                <option value="thick">Thick Crust</option>
+                <option value="gluten-free">Gluten-Free</option>
+            </select>
+
+            <!-- Sauce type selection -->
+            <label>Sauce:</label>
+            <select id="sauce" name="sauce">
+                <option value="tomato">Tomato</option>
+                <option value="pesto">No sauce</option>
+                <option value="alfredo">Alfredo</option>
+                <option value="bbq">BBQ</option>
+            </select>
+
+
+            <!-- Toppings checkboxes -->
+            <label>Toppings:</label>
+            <div id="topping-section">
+                <div class="topping-item">
+                    <input type="checkbox" id="pepperoni" name="toppings" value="Pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div id="topping-section">
+                    <div class="topping-item">
+                        <input type="checkbox" id="Grilled chicken" name="toppings" value="Grilled chicken">
+                        <label for="Grilled chicken">Grilled chicken</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="mushrooms" name="toppings" value="Mushrooms">
+                        <label for="mushrooms">Mushrooms</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="onions" name="toppings" value="Onions">
+                        <label for="onions">Onions</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="GArlic Roasted" name="toppings" value="GArlic Roasted">
+                        <label for="GArlic Roasted">GArlic Roasted</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="extraCheese" name="toppings" value="Extra Cheese">
+                        <label for="extraCheese">Extra Cheese</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="Feta Cheese" name="toppings" value="Feta Cheese">
+                        <label for="Feta Cheese">Feta Cheese</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="pineapple" name="toppings" value="Pineapple">
+                        <label for="pineapple">Pineapple</label>
+                    </div>
+                    <div class="topping-item">
+                        <input type="checkbox" id="Roasted Bacon" name="toppings" value="Roasted Bacon">
+                        <label for="Roasted Bacon">Roasted Bacon</label>
+                    </div>
+                </div>
+
+                <label for="instructions">Special Instructions:</label>
+                <textarea id="instructions" name="instructions"></textarea>
+
+                <input type="button" id="submitOrder" value="Place Order">
+        </form>
+
+        <div id="orderConfirmation"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizza Den</p>
+    </footer>
+
+</body>
+
+</html>
